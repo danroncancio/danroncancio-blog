@@ -1,0 +1,85 @@
+:root {
+    --font-family: 'Inconsolata', monospace;
+    --text-color: #3B4953;
+    --background-color: #EBF4DD;
+    --line-height: 1.4rem;
+
+    --font-size-base: 15px;
+    --font-size-small: 13px;
+    --font-size-large: 34px;
+    --font-size-h2: 25px;
+    --font-size-h3: 20px;
+    --font-size-h4: 18px;
+
+    --spacing-small: 5px;
+    --spacing-medium: 10px;
+    --spacing-large: 20px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 40px;
+
+    --container-max-width: 658px;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('./fonts/Inconsolata-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('./fonts/Inconsolata-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    line-height: var(--line-height);
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 100%;
+    margin: var(--spacing-large) auto;
+    padding: 0 var(--spacing-xl);
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--font-size-large);
+    margin-bottom: var(--spacing-medium);
+}
+
+
+/* Content elements */
+p,
+blockquote,
+ol,
+ul {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-large);
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-max-width);
+    margin: var(--spacing-xxl) auto;
+    padding: 0 var(--spacing-large);
+  }
+}
